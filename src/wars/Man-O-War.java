@@ -10,14 +10,16 @@ public class Man_O_War extends Ship
     private int marines;
     private int cost;
     
-    public Man_O_War(String nme, int skillLevel, String captain,int cost, int deck, int marine)
+    public Man_O_War(String nme, int skillLevel, String captain, int deck, int marine)
     {
-        super( nme,skillLevel,captain, 0 , "Man-O-War");
+        super( nme,skillLevel,captain,"Man-O-War");
+        cost = 0;
         decks = deck;
         marines = marine;
     }
     
-    public void setCost(int amount)
+    
+    public void setCost()
     {
       if (decks <= 2)
       {
@@ -28,12 +30,21 @@ public class Man_O_War extends Ship
           cost = 500;
       }
     }
+    
+    public int getCost()
+    {
+      return cost;  
+    }
+    
+    
     @Override
     public String toString()
     {
       String report = super.toString();
+      report += "Cost of ship: " + cost + "\n";
       report += "Number of decks: " + decks + "\n";
       report += "Number of marines: " + marines + "\n";
       return report;
     }
 }
+     
