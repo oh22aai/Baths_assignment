@@ -53,7 +53,7 @@ public class Ship {
     {
         return state;
     }
-    @Override
+    
     public String toString()
     {
         String s ="";
