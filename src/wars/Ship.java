@@ -11,9 +11,8 @@ public class Ship {
     private int skillLevel;
     private String captain;
     private String type;
-    private final int cannons;
-    
-    public Ship(String nme, int skillLevel, String captain, int cannons, int cost, String type)
+   
+    public Ship(String nme, int skillLevel, String captain,int cost, String type)
     {
         name = nme;
         this.skillLevel = skillLevel;
@@ -21,7 +20,7 @@ public class Ship {
         this.cost = cost;
         this.captain = captain;
         this.type = type;
-        this.cannons = cannons;
+         
     }
     
     public String getShipName()
@@ -44,32 +43,11 @@ public class Ship {
         return type;
     }
     
-    public void setCostOfShip(String type)
+    public int getCost()
     {
-        if (type.equalsIgnoreCase("Man-O-War"))
-        {
-           if (cannons <=2)
-           {
-              cost = 300; 
-           }
-           else
-           {
-              cost = 500; 
-           }
-        }
-        else if (type.equalsIgnoreCase("Frigate"))
-        {
-          cost = cannons*10;  
-        }
-        else if (type.equalsIgnoreCase("Sloop"))
-        {
-           cost = cost;
-        }
-        else
-        {
-           cost = 0; 
-        }
+        return cost;
     }
+    
     
     public ShipState getShipState()
     {
@@ -81,10 +59,13 @@ public class Ship {
         String s ="";
         s+= "Name of ship: " + name + "\n" + "Name of captain: " + captain + "\n"
              + "Cost of ship: " + cost + "\n" + "Skill Level :" + skillLevel + "\n"
-             + "Type of ship: " + type + "\n" + "Number of cannons: " + cannons
-             + "\n" + state.toString();
+             + "Type of ship: " + type + "\n" + "\n" + state.toString() + "\n";
         return s;
     }
         
     
 }
+    
+  
+   
+   
