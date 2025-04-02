@@ -7,17 +7,15 @@ package wars;
 public class Ship {
     private String name;
     private ShipState state;
-    private int cost;
     private int skillLevel;
     private String captain;
     private String type;
    
-    public Ship(String nme, int skillLevel, String captain,int cost, String type)
+    public Ship(String nme, int skillLevel, String captain, String type)
     {
         name = nme;
         this.skillLevel = skillLevel;
         state = ShipState.RESERVE;
-        this.cost = cost;
         this.captain = captain;
         this.type = type;
          
@@ -43,29 +41,30 @@ public class Ship {
         return type;
     }
     
-    public int getCost()
-    {
-        return cost;
-    }
-    
     
     public ShipState getShipState()
     {
         return state;
     }
     
+    public void changeState()
+    {
+        
+    }
+    
     public String toString()
     {
         String s ="";
-        s+= "Name of ship: " + name + "\n" + "Name of captain: " + captain + "\n"
-             + "Cost of ship: " + cost + "\n" + "Skill Level :" + skillLevel + "\n"
-             + "Type of ship: " + type + "\n" + "\n" + state.toString() + "\n";
+        s+= "Name of ship: " + name + "\n" + "Name of captain: " + captain
+             + "\n" + "Skill Level :" + skillLevel + "\n"
+             + "Type of ship: " + type + "\n" + state.toString() + "\n";
         return s;
     }
         
     
 }
-    
+   
+  
   
    
    
