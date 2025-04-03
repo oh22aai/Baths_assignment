@@ -10,8 +10,11 @@ public class Ship {
     private int skillLevel;
     private String captain;
     private String type;
+    private boolean battle;
+    private boolean skirmish;
+    private boolean blockade;
    
-    public Ship(String nme, int skillLevel, String captain, String type)
+    public Ship(String nme, int skillLevel, String captain, String type, boolean battle, boolean skirmish, boolean blockade)
     {
         name = nme;
         this.skillLevel = skillLevel;
@@ -47,9 +50,19 @@ public class Ship {
         return state;
     }
     
-    public void changeState()
+   public boolean battle()
     {
-        
+       return battle;
+    }
+
+    public boolean skirmish()
+    {
+        return skirmish;
+    }
+
+    public boolean blockade()
+    {
+        return blockade;
     }
     
     public String toString()
@@ -57,7 +70,8 @@ public class Ship {
         String s ="";
         s+= "Name of ship: " + name + "\n" + "Name of captain: " + captain
              + "\n" + "Skill Level :" + skillLevel + "\n"
-             + "Type of ship: " + type + "\n" + state.toString() + "\n";
+             + "Type of ship: " + type + "\n" + "Battle: " + battle + "\n" + 
+            "Skirmish: " + skirmish + "\n" + "Blockade: " + blockade + "\n" state.toString() + "\n";
         return s;
     }
         
