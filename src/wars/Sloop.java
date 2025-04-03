@@ -11,7 +11,7 @@ public class Sloop extends Ship
     
     public Sloop(String nme, String captain, int cost)
     {
-        super (nme, 5, captain,"Sloop");
+        super (nme, 5, captain,"Sloop", true, true, false);
         this.cost = cost;
         doctor = false;
     }
