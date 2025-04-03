@@ -7,19 +7,19 @@ package wars;
 public class Sloop extends Ship 
 {
     private boolean doctor;
-    private int cost;
+    
     
     public Sloop(String nme, String captain, int cost)
     {
-        super (nme, 5, captain,"Sloop", true, true, false);
-        this.cost = cost;
+        super (nme, 5, captain,"Sloop", true, true, false, cost,0,0);
         doctor = false;
     }
     
-    public int getCost()
+    public void setCost()
     {
-        return cost;
+        super.setCost("Sloop");
     }
+       
     
     public void setDoctor(String doc)
     {
@@ -38,7 +38,6 @@ public class Sloop extends Ship
     public String toString()
     {
         String report = super.toString();
-        report += "Cost of ship: " + cost + "\n";
         report += "Doctor: " + doctor + "\n";
         return report;
     }
