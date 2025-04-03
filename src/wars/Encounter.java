@@ -46,6 +46,17 @@ public class Encounter
     {
         return e_Prize;
     }
+
+    public String toString()
+    {
+        String report = "";
+        report += "Encounter: " + e_Number + "\n";
+        report += "Type of encounter: " + e_Type + "\n";
+        report += "Skill Level: " + e_Level + "\n";
+        report += "Location: " + e_Location + "\n";
+        report += "Prize Money: " + e_Prize + "\n";
+        return report;
+    }
     
     
 }
