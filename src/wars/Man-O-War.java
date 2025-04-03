@@ -12,7 +12,7 @@ public class Man_O_War extends Ship
     
     public Man_O_War(String nme, int skillLevel, String captain, int deck, int marine)
     {
-        super( nme,skillLevel,captain,"Man-O-War");
+        super( nme,skillLevel,captain,"Man-O-War", true, false, true);
         cost = 0;
         decks = deck;
         marines = marine;
