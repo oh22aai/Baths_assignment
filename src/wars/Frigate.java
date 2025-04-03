@@ -12,7 +12,7 @@ public class Frigate extends Ship
     
     public Frigate(String nme, int skillLevel, String captain, int cannons)
     {
-        super(nme, skillLevel, captain, "Frigate");
+        super(nme, skillLevel, captain, "Frigate", true, true, true);
         pinnace = false;
         this.cannons = cannons;
         cost = 0;
